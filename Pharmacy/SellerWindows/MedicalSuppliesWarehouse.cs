@@ -62,7 +62,7 @@ namespace Pharmacy.SellerWindows
                 CatalogMedication catalogMedication = new CatalogMedication()
                 {
                     Idmedication = medication.Idmedication,
-                    QuantityCatalogMedication = Convert.ToInt32(Quantity.Text)
+                    QuantityCatalogMedication = Convert.ToInt32(Quantity.Text) 
                 };
                 db.Add(catalogMedication);
                 medication.Quantity -= Convert.ToInt32(Quantity.Text);
