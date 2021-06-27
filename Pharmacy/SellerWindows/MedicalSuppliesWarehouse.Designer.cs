@@ -34,6 +34,8 @@ namespace Pharmacy.SellerWindows
             this.BackWindows = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Quantity = new System.Windows.Forms.TextBox();
+            this.SearchTable = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,11 +88,34 @@ namespace Pharmacy.SellerWindows
             this.Quantity.Size = new System.Drawing.Size(200, 25);
             this.Quantity.TabIndex = 31;
             // 
+            // SearchTable
+            // 
+            this.SearchTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchTable.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            this.SearchTable.Location = new System.Drawing.Point(581, 9);
+            this.SearchTable.Multiline = true;
+            this.SearchTable.Name = "SearchTable";
+            this.SearchTable.Size = new System.Drawing.Size(468, 25);
+            this.SearchTable.TabIndex = 34;
+            this.SearchTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTable_KeyDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label2.Location = new System.Drawing.Point(454, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 28);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Название:";
+            // 
             // MedicalSuppliesWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1297, 496);
+            this.Controls.Add(this.SearchTable);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Quantity);
             this.Controls.Add(this.BackWindows);
@@ -110,5 +135,7 @@ namespace Pharmacy.SellerWindows
         private System.Windows.Forms.Button BackWindows;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox Quantity;
+        private System.Windows.Forms.TextBox SearchTable;
+        private System.Windows.Forms.Label label2;
     }
 }

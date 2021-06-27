@@ -15,12 +15,12 @@ namespace Pharmacy.SellerWindows
 
         public static List<BasketOrder> baskets = new List<BasketOrder>();
 
-        public static void  AddBasketOrder(string nameMedication, string barcode, double price, int quantity)
+        public static void AddBasketOrder(string nameMedication, string barcode, double price, int quantity)
         {
             CatalogMedication catalog = new CatalogMedication();
             baskets.Add(new BasketOrder()
-            { 
-                NameMedication =nameMedication,
+            {
+                NameMedication = nameMedication,
                 Barcode = barcode,
                 Price = price,
                 Quantity = quantity
@@ -28,11 +28,12 @@ namespace Pharmacy.SellerWindows
         }
         public static double TotalPrice()
         {
-            foreach (BasketOrder p in baskets)
+            double price = 0;
+            for (int i = 0; i < BasketOrder.baskets.Count; i++)
             {
-                return p.Price * BasketOrder.baskets.Count();
+                price += BasketOrder.baskets[i].Price;
             }
-            return 0;
+            return price;
         }
         public override string ToString()
             =>

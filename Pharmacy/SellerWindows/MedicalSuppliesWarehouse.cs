@@ -107,5 +107,30 @@ namespace Pharmacy.SellerWindows
             sellerWindows.Show();
             this.Close();
         }
+
+        private void SearchTable_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //for (int i = 0; i <= dataGridView1.Rows.Count - 1; i++)
+                //{
+                //    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                //}
+                for (int i = 0; i <= dataGridView1.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j <= dataGridView1.ColumnCount - 1; j++)
+                    {
+                        if (dataGridView1.Rows[i].Cells[j].Value != null && dataGridView1.Rows[i].Cells[j].Value.ToString() == SearchTable.Text)
+                        {
+                            dataGridView1.Rows[i].Cells[j].Selected = true;
+                 //           dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                        }
+                    }
+
+                }
+                
+                //SearchTable.Clear();
+            }
+        }
     }
 }
