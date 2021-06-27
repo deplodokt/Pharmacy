@@ -182,6 +182,13 @@
     <Compile Include="AdministrationWindows\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellerWindows\Basket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerWindows\Basket.Designer.cs">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerWindows\BasketOrder.cs" />
     <Compile Include="SellerWindows\MedicalSuppliesWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdministrationWindows\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerWindows\Basket.resx">
+      <DependentUpon>Basket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SellerWindows\MedicalSuppliesWarehouse.resx">
       <DependentUpon>MedicalSuppliesWarehouse.cs</DependentUpon>
