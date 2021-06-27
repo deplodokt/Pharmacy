@@ -36,6 +36,8 @@ namespace Pharmacy.SellerWindows
             this.DeleteOrder = new System.Windows.Forms.Button();
             this.TotalPriceOrder = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CreateBuyerOrder
@@ -90,7 +92,7 @@ namespace Pharmacy.SellerWindows
             // TotalPriceOrder
             // 
             this.TotalPriceOrder.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.TotalPriceOrder.Location = new System.Drawing.Point(299, 239);
+            this.TotalPriceOrder.Location = new System.Drawing.Point(414, 242);
             this.TotalPriceOrder.Multiline = true;
             this.TotalPriceOrder.Name = "TotalPriceOrder";
             this.TotalPriceOrder.Size = new System.Drawing.Size(160, 27);
@@ -100,11 +102,31 @@ namespace Pharmacy.SellerWindows
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.label1.Location = new System.Drawing.Point(216, 242);
+            this.label1.Location = new System.Drawing.Point(339, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 24);
             this.label1.TabIndex = 19;
             this.label1.Text = "Итого";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 13F);
+            this.label3.Location = new System.Drawing.Point(220, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 30);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "label";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 13F);
+            this.label2.Location = new System.Drawing.Point(72, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 30);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Продовец:";
             // 
             // Basket
             // 
@@ -112,6 +134,8 @@ namespace Pharmacy.SellerWindows
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(594, 291);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TotalPriceOrder);
             this.Controls.Add(this.DeleteOrder);
@@ -134,5 +158,7 @@ namespace Pharmacy.SellerWindows
         private System.Windows.Forms.Button DeleteOrder;
         private System.Windows.Forms.TextBox TotalPriceOrder;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

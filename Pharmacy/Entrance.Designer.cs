@@ -42,7 +42,7 @@ namespace Pharmacy
             // 
             this.LoginEntrance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LoginEntrance.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.LoginEntrance.Location = new System.Drawing.Point(221, 394);
+            this.LoginEntrance.Location = new System.Drawing.Point(221, 407);
             this.LoginEntrance.Multiline = true;
             this.LoginEntrance.Name = "LoginEntrance";
             this.LoginEntrance.Size = new System.Drawing.Size(300, 25);
@@ -75,9 +75,9 @@ namespace Pharmacy
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pharmacy.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(234, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(198, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(276, 260);
+            this.pictureBox1.Size = new System.Drawing.Size(372, 285);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -85,11 +85,11 @@ namespace Pharmacy
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 25F);
-            this.label1.Location = new System.Drawing.Point(283, 285);
+            this.label1.Location = new System.Drawing.Point(283, 305);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 59);
+            this.label1.Size = new System.Drawing.Size(209, 59);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Дуптик";
+            this.label1.Text = "ДУПТИК";
             // 
             // Entrance
             // 

@@ -18,6 +18,7 @@ namespace Pharmacy.SellerWindows
             this.Text = "Корзина";
             TotalPriceOrder.Text = BasketOrder.TotalPrice().ToString();
             comboBox1.DataSource = BasketOrder.baskets;
+            label3.Text = SellerLogin.SellerLoginCurrent.LoginSeller;
         }
 
         private void CreateBuyerOrder_Click(object sender, EventArgs e)

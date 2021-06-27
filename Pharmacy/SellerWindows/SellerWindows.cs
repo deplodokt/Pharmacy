@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -34,6 +35,7 @@ namespace Pharmacy.SellerWindows
         {
             InitializeComponent();
             this.Text = "Окно продовца";
+            
             UpCatalog();
             dataGridView1.Columns[0].HeaderText = "Название"; //1
             dataGridView1.Columns[1].HeaderText = "Баркод"; //2

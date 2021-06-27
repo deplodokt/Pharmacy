@@ -58,9 +58,9 @@ namespace Pharmacy.SellerWindows
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 20F);
             this.label1.Location = new System.Drawing.Point(2, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 47);
+            this.label1.Size = new System.Drawing.Size(150, 47);
             this.label1.TabIndex = 9;
-            this.label1.Text = "каталог";
+            this.label1.Text = "Каталог";
             // 
             // Tovars
             // 

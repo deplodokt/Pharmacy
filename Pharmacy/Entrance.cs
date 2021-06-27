@@ -81,22 +81,24 @@ namespace Pharmacy
             AdministrationWindows.AdministrationWindow administrationWindow = new AdministrationWindows.AdministrationWindow();
             try
             {
-                if (CheckSeller() == true)
-                {
-                    sellerWindows.Show();
-                    this.Hide();
-
-                }
-                else 
                 if (CheckSuppliers() == true)
                 {
                     suppliersWindows.Show();
+
                     this.Hide();
                 }
+                else
+                if (CheckSeller() == true)
+                {
+                    sellerWindows.Show();
+                     this.Hide();
+                }
+               
                 else
                 if (CheckAdmin() == true)
                 {
                     administrationWindow.Show();
+
                     this.Hide();
                 }
                 else if (CheckSuppliers() == false && CheckSeller() == false)

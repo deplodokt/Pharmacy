@@ -44,7 +44,7 @@ namespace Pharmacy.SuppliersWindows
             dataGridView1.Columns[6].HeaderText = "Количество";
             dataGridView1.Columns[7].HeaderText = "Постовщик";
             dataGridView1.AutoResizeColumns();
-
+            label2.Text = Suppliers.SuppliersNameCurrent.NameSeller;
 
         }
         private void AddMedicationTovar_Click(object sender, EventArgs e)
