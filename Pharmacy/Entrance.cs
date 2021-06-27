@@ -24,13 +24,10 @@ namespace Pharmacy
 
                 bool chekSuppliers = pharmacyBDContext.Suppliers.Any(p => p.LoginSuppliers == LoginEntrance.Text && p.PasswordSuppliers == PasswordEntrance.Text);
 
-                Suppliers suppliers = pharmacyBDContext.Suppliers.FirstOrDefault(p => p.LoginSuppliers == LoginEntrance.Text && p.LoginSuppliers == PasswordEntrance.Text);
-
+                Suppliers suppliers = pharmacyBDContext.Suppliers.FirstOrDefault(p => p.LoginSuppliers == LoginEntrance.Text);
                 if (chekSuppliers == true)
                 {
-                    SuppliersWindows.Suppliers.SuppliersNameCurrent.NameSeller = suppliers.NameSuppliers;
-                    SellerWindows.SellerLogin.SellerLoginCurrent.IdSeller = suppliers.Idsuppliers;
-
+                        SuppliersWindows.Suppliers.SuppliersNameCurrent.NameSupplirs = suppliers.NameSuppliers;
                 }
                 else if (chekSuppliers == false)
                 {
@@ -48,7 +45,7 @@ namespace Pharmacy
 
                 bool chekSeller = pharmacyBDContext.Seller.Any(p => p.LoginSeller == LoginEntrance.Text && p.PasswordSeller == PasswordEntrance.Text);
 
-                Seller seller = pharmacyBDContext.Seller.FirstOrDefault(p => p.LoginSeller == LoginEntrance.Text && p.PasswordSeller == PasswordEntrance.Text);
+                Seller seller = pharmacyBDContext.Seller.FirstOrDefault(p => p.LoginSeller == LoginEntrance.Text);
                 if (chekSeller == true)
                 {
                     SellerWindows.SellerLogin.SellerLoginCurrent.LoginSeller = seller.LoginSeller;

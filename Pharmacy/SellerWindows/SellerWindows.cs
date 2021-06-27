@@ -37,13 +37,13 @@ namespace Pharmacy.SellerWindows
             this.Text = "Окно продовца";
             
             UpCatalog();
-            dataGridView1.Columns[0].HeaderText = "Название"; //1
-            dataGridView1.Columns[1].HeaderText = "Баркод"; //2
+            dataGridView1.Columns[0].HeaderText = "Название"; 
+            dataGridView1.Columns[1].HeaderText = "Баркод"; 
             dataGridView1.Columns[2].HeaderText = "Дата производства";
             dataGridView1.Columns[3].HeaderText = "Годен до";
             dataGridView1.Columns[4].HeaderText = "Рецепт";
-            dataGridView1.Columns[5].HeaderText = "Цена"; //6
-            dataGridView1.Columns[6].HeaderText = "Количество"; // 7
+            dataGridView1.Columns[5].HeaderText = "Цена"; 
+            dataGridView1.Columns[6].HeaderText = "Количество";
             dataGridView1.Columns[7].HeaderText = "Постовщик";
             DataGridViewButtonColumn addButton = new DataGridViewButtonColumn();
             addButton.HeaderText = "Добавить";
