@@ -29,6 +29,7 @@ namespace Pharmacy.SuppliersWindows
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMedication));
             this.BackWindows = new System.Windows.Forms.Button();
             this.AddNameMedication = new System.Windows.Forms.TextBox();
             this.AddBarcode = new System.Windows.Forms.TextBox();
@@ -241,6 +242,7 @@ namespace Pharmacy.SuppliersWindows
             this.Controls.Add(this.Quantity);
             this.Controls.Add(this.AddMedicationTovar);
             this.Controls.Add(this.BackWindows);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddMedication";
             this.Text = "AddMedication";
             this.groupBox1.ResumeLayout(false);

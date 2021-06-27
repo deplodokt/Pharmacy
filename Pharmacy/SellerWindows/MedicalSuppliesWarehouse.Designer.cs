@@ -29,6 +29,7 @@ namespace Pharmacy.SellerWindows
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicalSuppliesWarehouse));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BackWindows = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -94,6 +95,7 @@ namespace Pharmacy.SellerWindows
             this.Controls.Add(this.Quantity);
             this.Controls.Add(this.BackWindows);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MedicalSuppliesWarehouse";
             this.Text = "MedicalSuppliesWarehouse";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

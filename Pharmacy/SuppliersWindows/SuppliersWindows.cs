@@ -43,18 +43,10 @@ namespace Pharmacy.SuppliersWindows
             dataGridView1.Columns[5].HeaderText = "Цена";
             dataGridView1.Columns[6].HeaderText = "Количество";
             dataGridView1.Columns[7].HeaderText = "Постовщик";
-
             dataGridView1.AutoResizeColumns();
 
 
         }
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void AddMedicationTovar_Click(object sender, EventArgs e)
         {
             AddMedication medication = new AddMedication();

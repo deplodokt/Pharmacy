@@ -29,6 +29,7 @@ namespace Pharmacy.SellerWindows
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerWindows));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Tovars = new System.Windows.Forms.Button();
@@ -47,16 +48,17 @@ namespace Pharmacy.SellerWindows
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1040, 398);
+            this.dataGridView1.Size = new System.Drawing.Size(1271, 398);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 54);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 20F);
+            this.label1.Location = new System.Drawing.Point(2, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 17);
+            this.label1.Size = new System.Drawing.Size(145, 47);
             this.label1.TabIndex = 9;
             this.label1.Text = "каталог";
             // 
@@ -65,11 +67,11 @@ namespace Pharmacy.SellerWindows
             this.Tovars.BackColor = System.Drawing.Color.MistyRose;
             this.Tovars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Tovars.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.Tovars.Location = new System.Drawing.Point(589, 12);
+            this.Tovars.Location = new System.Drawing.Point(1035, 31);
             this.Tovars.Name = "Tovars";
-            this.Tovars.Size = new System.Drawing.Size(300, 44);
+            this.Tovars.Size = new System.Drawing.Size(246, 44);
             this.Tovars.TabIndex = 21;
-            this.Tovars.Text = "Склад";
+            this.Tovars.Text = "Склад продукции";
             this.Tovars.UseVisualStyleBackColor = false;
             this.Tovars.Click += new System.EventHandler(this.Tovars_Click);
             // 
@@ -78,9 +80,9 @@ namespace Pharmacy.SellerWindows
             this.button1.BackColor = System.Drawing.Color.MistyRose;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(264, 12);
+            this.button1.Location = new System.Drawing.Point(1106, 512);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 44);
+            this.button1.Size = new System.Drawing.Size(175, 44);
             this.button1.TabIndex = 22;
             this.button1.Text = "Корзина";
             this.button1.UseVisualStyleBackColor = false;
@@ -91,11 +93,12 @@ namespace Pharmacy.SellerWindows
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(1062, 519);
+            this.ClientSize = new System.Drawing.Size(1295, 563);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Tovars);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SellerWindows";
             this.Text = "SellerWindows";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

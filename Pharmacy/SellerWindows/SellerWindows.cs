@@ -90,5 +90,7 @@ namespace Pharmacy.SellerWindows
            // RspoMagazines.KolMagazinesReport.KolMagazines.QualityMagazines++;
             UpCatalog();
         }
+
+      
     }
 }

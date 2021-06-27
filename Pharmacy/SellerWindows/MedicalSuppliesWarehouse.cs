@@ -32,6 +32,7 @@ namespace Pharmacy.SellerWindows
         public MedicalSuppliesWarehouse()
         {
             InitializeComponent();
+            this.Text = "Окно склада продукции";
             UpTable();
             dataGridView1.Columns[0].HeaderText = "Название";
             dataGridView1.Columns[1].HeaderText = "Баркод";

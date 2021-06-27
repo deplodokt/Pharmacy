@@ -29,6 +29,7 @@ namespace Pharmacy.SellerWindows
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Basket));
             this.CreateBuyerOrder = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.BackWindows = new System.Windows.Forms.Button();
@@ -117,6 +118,7 @@ namespace Pharmacy.SellerWindows
             this.Controls.Add(this.BackWindows);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.CreateBuyerOrder);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Basket";
             this.Text = "Basket";
             this.ResumeLayout(false);

@@ -29,10 +29,12 @@ namespace Pharmacy
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entrance));
             this.LoginEntrance = new System.Windows.Forms.TextBox();
             this.PasswordEntrance = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.EnterSystem = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,15 +59,6 @@ namespace Pharmacy
             this.PasswordEntrance.Size = new System.Drawing.Size(300, 25);
             this.PasswordEntrance.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Pharmacy.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(340, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 38);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // EnterSystem
             // 
             this.EnterSystem.BackColor = System.Drawing.Color.MistyRose;
@@ -79,17 +72,38 @@ namespace Pharmacy
             this.EnterSystem.UseVisualStyleBackColor = false;
             this.EnterSystem.Click += new System.EventHandler(this.EnterSystem_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pharmacy.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(234, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(276, 260);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 25F);
+            this.label1.Location = new System.Drawing.Point(283, 285);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(174, 59);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Дуптик";
+            // 
             // Entrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(726, 576);
-            this.Controls.Add(this.EnterSystem);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.EnterSystem);
             this.Controls.Add(this.PasswordEntrance);
             this.Controls.Add(this.LoginEntrance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Entrance";
             this.Text = "Entrance";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -102,7 +116,8 @@ namespace Pharmacy
 
         private System.Windows.Forms.TextBox LoginEntrance;
         private System.Windows.Forms.TextBox PasswordEntrance;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button EnterSystem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
