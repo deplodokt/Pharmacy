@@ -59,19 +59,44 @@ namespace Pharmacy.SellerWindows
 
             using (PharmacyBDContext db = new PharmacyBDContext())
             {
-                Medication medication = db.Medication.FirstOrDefault(p => p.NameMedication == num);
-                CatalogMedication catalogMedication = new CatalogMedication()
+                try
                 {
-                    Idmedication = medication.Idmedication,
-                    QuantityCatalogMedication = Convert.ToInt32(Quantity.Text) 
-                };
-                db.Add(catalogMedication);
-                medication.Quantity -= Convert.ToInt32(Quantity.Text);
-                if (medication.Quantity == 0)
-                {
-                    db.Remove(medication);
+                    bool catalogMedicationCheck = db.CatalogMedication.Any(p => p.IdmedicationNavigation.NameMedication == num);
+                    CatalogMedication catalogMedicationTwo = db.CatalogMedication.FirstOrDefault(p => p.IdmedicationNavigation.NameMedication == num);
+                    Medication medication = db.Medication.FirstOrDefault(p => p.NameMedication == num);
+                    if (catalogMedicationCheck == false)
+                    {
+                        CatalogMedication catalogMedication = new CatalogMedication()
+                        {
+                            Idmedication = medication.Idmedication,
+                            QuantityCatalogMedication = Convert.ToInt32(Quantity.Text)
+                        };
+
+                        db.Add(catalogMedication);
+                        medication.Quantity -= Convert.ToInt32(Quantity.Text);
+                        if (medication.Quantity == 0)
+                        {
+                            db.Remove(medication);
+                        }
+                        db.SaveChanges();
+                        UpTable();
+
+                    }
+                    else if (catalogMedicationCheck == true)
+                    {
+                        CatalogMedication catalogMedication = new CatalogMedication();
+                        catalogMedicationTwo.QuantityCatalogMedication += Convert.ToInt32(Quantity.Text);
+                        medication.Quantity -= Convert.ToInt32(Quantity.Text);
+                        db.SaveChanges();
+                        UpTable();
+
+                    }
                 }
-                db.SaveChanges();
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Введите количество");
+                }
             }
             UpTable();
         }

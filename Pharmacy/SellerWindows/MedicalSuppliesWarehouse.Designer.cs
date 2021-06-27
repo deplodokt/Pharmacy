@@ -48,7 +48,7 @@ namespace Pharmacy.SellerWindows
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1170, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(1293, 450);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -90,7 +90,7 @@ namespace Pharmacy.SellerWindows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1172, 497);
+            this.ClientSize = new System.Drawing.Size(1297, 496);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Quantity);
             this.Controls.Add(this.BackWindows);

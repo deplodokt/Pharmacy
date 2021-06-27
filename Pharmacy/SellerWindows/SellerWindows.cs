@@ -75,7 +75,6 @@ namespace Pharmacy.SellerWindows
             string barcode = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             string kol = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             string price = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            MessageBox.Show(titel + " " + barcode + " " + kol + " " + price);
             BasketOrder.AddBasketOrder(titel, barcode, Convert.ToDouble(price), Convert.ToInt32(kol));
             
             using (PharmacyBDContext db = new PharmacyBDContext())
@@ -93,6 +92,16 @@ namespace Pharmacy.SellerWindows
             UpCatalog();
         }
 
-      
+        private void SearchTable_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                for (int i = 0; i <= dataGridView1.Rows.Count - 1; i++)
+                    for (int j = 0; j <= dataGridView1.ColumnCount - 1; j++)
+                        if (dataGridView1.Rows[i].Cells[j].Value != null && dataGridView1.Rows[i].Cells[j].Value.ToString() == SearchTable.Text)
+                            dataGridView1.Rows[i].Cells[j].Selected = true;
+            }
+
+        }
     }
 }

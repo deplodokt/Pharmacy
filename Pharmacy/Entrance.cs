@@ -100,13 +100,7 @@ namespace Pharmacy
                 }
                 else if (CheckSuppliers() == false && CheckSeller() == false)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Вы ещё не зарегистрировались\nхотите зарегистрироваться?", "Регистрация", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        AdministrationWindows.Registration registration = new AdministrationWindows.Registration();
-                        registration.Show();
-                        this.Hide();
-                    }
+                    DialogResult dialogResult = MessageBox.Show("Вы ещё не зарегистрирована", "Регистрация");
                 }
             }
             catch (Exception)
