@@ -29,7 +29,24 @@ namespace Pharmacy.SuppliersWindows
                 }
                 ).ToList();
         }
-
+        public void UpSuppliers()
+        {
+            PharmacyBDContext pharmacy = new PharmacyBDContext();
+            var two = pharmacy.Medication.Where(f => f.IdsuppliersNavigation.NameSuppliers == Suppliers.SuppliersNameCurrent.NameSupplirs).Select(
+                medication => new
+                {
+                    medication.NameMedication,
+                    medication.Barcode,
+                    medication.ProductionDate,
+                    medication.ExperienceDate,
+                    medication.WhithReceipt,
+                    medication.Price,
+                    medication.Quantity,
+                    medication.IdsuppliersNavigation.NameSuppliers
+                }
+                ).ToList();
+            dataGridView1.DataSource = two;
+        }
         public SuppliersWindows()
         {
             InitializeComponent();
@@ -48,9 +65,23 @@ namespace Pharmacy.SuppliersWindows
         }
         private void AddMedicationTovar_Click(object sender, EventArgs e)
         {
+           
             AddMedication medication = new AddMedication();
             medication.Show();
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                UpTable();
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                UpSuppliers();
+            
+            }
         }
     }
 }

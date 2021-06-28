@@ -16,6 +16,7 @@ namespace Pharmacy.SuppliersWindows
         {
             InitializeComponent();
             this.Text = "Добавления товара";
+            label8.Text = Suppliers.SuppliersNameCurrent.NameSupplirs;
         }
 
         private void BackWindows_Click(object sender, EventArgs e)

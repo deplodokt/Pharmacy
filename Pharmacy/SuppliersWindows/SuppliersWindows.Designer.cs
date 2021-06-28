@@ -32,6 +32,7 @@ namespace Pharmacy.SuppliersWindows
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuppliersWindows));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AddMedicationTovar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@ namespace Pharmacy.SuppliersWindows
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 388);
+            this.dataGridView1.Size = new System.Drawing.Size(1162, 388);
             this.dataGridView1.TabIndex = 0;
             // 
             // AddMedicationTovar
@@ -54,7 +55,7 @@ namespace Pharmacy.SuppliersWindows
             this.AddMedicationTovar.BackColor = System.Drawing.Color.MistyRose;
             this.AddMedicationTovar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddMedicationTovar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.AddMedicationTovar.Location = new System.Drawing.Point(716, 12);
+            this.AddMedicationTovar.Location = new System.Drawing.Point(868, 12);
             this.AddMedicationTovar.Name = "AddMedicationTovar";
             this.AddMedicationTovar.Size = new System.Drawing.Size(300, 44);
             this.AddMedicationTovar.TabIndex = 7;
@@ -62,12 +63,26 @@ namespace Pharmacy.SuppliersWindows
             this.AddMedicationTovar.UseVisualStyleBackColor = false;
             this.AddMedicationTovar.Click += new System.EventHandler(this.AddMedicationTovar_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Склад",
+            "Поставщик"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(306, 26);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // SuppliersWindows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(1028, 512);
+            this.ClientSize = new System.Drawing.Size(1186, 512);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.AddMedicationTovar);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -82,5 +97,6 @@ namespace Pharmacy.SuppliersWindows
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AddMedicationTovar;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
