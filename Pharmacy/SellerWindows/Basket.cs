@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,36 +26,46 @@ namespace Pharmacy.SellerWindows
         private void CreateBuyerOrder_Click(object sender, EventArgs e)
         {
             int counter = 0;
-            double sum = 1;
             var builder = new StringBuilder();
             string check = RandomReceipt.RandomKod.RandomString();
 
-            builder.AppendLine($"{"".PadRight(25, ' ')}ОАО \"Дуптик\" ");
+            var document = new PdfDocument();
+            document.Info.Title = "Создание";
+            PdfPage page = document.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            XFont font = new XFont("Console", 10, XFontStyle.Regular);
+           
+
+            int postionValues = 40;
+            int postionValuesBarcode = 50;
+            int postionValuesPrice = 60;
+
+            gfx.DrawString($"{"".PadRight(25, ' ')}ОАО \"Дуптик\" ", font, XBrushes.Black,
+                new XPoint(100, 20));
+
             foreach (var product in BasketOrder.baskets)
             {
 
                 counter++;
-                builder.AppendLine($"{counter}.{product.NameMedication}");
-                builder.AppendLine($"Код: {product.Barcode}");
-                builder.AppendLine($"  Стоимость{"".PadRight(40 - product.Price.ToString().Length, '.')}{product.Price}");
+                gfx.DrawString($"{counter}.{product.NameMedication}", font, XBrushes.Black,
+                new XPoint(100,postionValues));
+                gfx.DrawString($"Код: {product.Barcode}", font, XBrushes.Black,
+                new XPoint(100, postionValuesBarcode));
+                gfx.DrawString($"  Стоимость{"".PadRight(40 - product.Price.ToString().Length, '.')}{product.Price}", font, XBrushes.Black,
+                 new XPoint(100, postionValuesPrice));
+                postionValues += 30;
+                postionValuesBarcode += 30;
+                postionValuesPrice += 30;
             }
-            builder.AppendLine("".PadRight(51, '='));
-            builder.AppendLine($"{DateTime.Now.ToString("G")} {"".PadRight(40 - DateTime.Now.ToString("G").Length, '.')} №{check}");
-            builder.AppendLine($"Итого{"".PadRight(45 - BasketOrder.TotalPrice().ToString().Length, '.')}{Math.Round((BasketOrder.TotalPrice()), 3).ToString()}");
-            File.WriteAllText(@"D:\КПиЯП\Pharmacy\Pharmacy\SellerWindows\BuyersReceipt\" + check + ".txt", builder.ToString());
+            gfx.DrawString("".PadRight(29, '='), font, XBrushes.Black,
+                  new XPoint(100, postionValuesPrice));
+            gfx.DrawString($"{DateTime.Now.ToString("G")} {"".PadRight(30 - DateTime.Now.ToString("G").Length, '.')} №{check}", font, XBrushes.Black,
+                  new XPoint(100, postionValuesPrice+20));
+            gfx.DrawString($"Итого{"".PadRight(50 - BasketOrder.TotalPrice().ToString().Length, '.')}{Math.Round((BasketOrder.TotalPrice()), 3).ToString()}", font, XBrushes.Black,
+                  new XPoint(100, postionValuesPrice+30));
             MessageBox.Show("Чек покупателя");
-            /* using (magazinesShopContext db = new magazinesShopContext())
-             {
-                 QuantitySold quantitySold = new QuantitySold()
-                 {
-
-                     QuantitySoldMagazines = RspoMagazines.KolMagazinesReport.KolMagazines.QualityMagazines,
-                     QuantitySoldPrice = UserWindows.AddBasket.PriceMagazines() - sum,
-                     DateQuantitySold = DateTime.Now
-                 };
-                 db.Add(quantitySold);
-                 db.SaveChanges();
-             }*/
+            string filename = @"D:\КПиЯП\Pharmacy\Pharmacy\SellerWindows\BuyersReceipt\" + check + ".pdf";
+            document.Save(filename);
         }
 
 

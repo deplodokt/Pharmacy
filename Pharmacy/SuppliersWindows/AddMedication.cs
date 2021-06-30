@@ -28,31 +28,40 @@ namespace Pharmacy.SuppliersWindows
 
         private void AddMedicationTovar_Click(object sender, EventArgs e)
         {
-            using (PharmacyBDContext db = new PharmacyBDContext())
+            DateTime dateFirst = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
+            DateTime dateLast = Convert.ToDateTime(dateTimePicker2.Value.ToShortDateString());
+            bool checkdate = dateLast > dateFirst ? true : false;
+            if (checkdate == true)
             {
-
-                try
+                using (PharmacyBDContext db = new PharmacyBDContext())
                 {
-                    Medication medication = new Medication()
+                    try
                     {
-                        NameMedication = AddNameMedication.Text,
-                        Barcode = AddBarcode.Text,
-                        ProductionDate = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString()),
-                        ExperienceDate = Convert.ToDateTime(dateTimePicker2.Value.ToShortDateString()),
-                        Price = Convert.ToInt32(PriceMedication.Text),
-                        WhithReceipt = checkBox1.Checked ? "Нужен" : "Не нужен",
-                        Quantity = Convert.ToInt32(Quantity.Text),
-                        Idsuppliers = SellerWindows.SellerLogin.SellerLoginCurrent.IdSeller
+                        Medication medication = new Medication()
+                        {
+                            NameMedication = AddNameMedication.Text,
+                            Barcode = AddBarcode.Text,
+                            ProductionDate = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString()),
+                            ExperienceDate = Convert.ToDateTime(dateTimePicker2.Value.ToShortDateString()),
+                            Price = Convert.ToInt32(PriceMedication.Text),
+                            WhithReceipt = checkBox1.Checked ? "Нужен" : "Не нужен",
+                            Quantity = Convert.ToInt32(Quantity.Text),
+                            Idsuppliers = Suppliers.SuppliersNameCurrent.IdSuppliers
 
-                    };
-                    db.Add(medication);
-                    db.SaveChanges();
-                    MessageBox.Show("Товар добавлен");
+                        };
+                        db.Add(medication);
+                        db.SaveChanges();
+                        MessageBox.Show("Товар добавлен");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Ошибка");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Ошибка");
-                }
+            }
+            else if (checkdate == false)
+            {
+                MessageBox.Show("Проверте дату");
             }
             AddNameMedication.Clear();
             AddBarcode.Clear();

@@ -43,7 +43,7 @@ namespace Pharmacy.AdministrationWindows
             this.AddSupplier.BackColor = System.Drawing.Color.MistyRose;
             this.AddSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddSupplier.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.AddSupplier.Location = new System.Drawing.Point(241, 28);
+            this.AddSupplier.Location = new System.Drawing.Point(261, 28);
             this.AddSupplier.Name = "AddSupplier";
             this.AddSupplier.Size = new System.Drawing.Size(359, 44);
             this.AddSupplier.TabIndex = 7;
@@ -71,7 +71,7 @@ namespace Pharmacy.AdministrationWindows
             this.AddSeller.BackColor = System.Drawing.Color.MistyRose;
             this.AddSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddSeller.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.AddSeller.Location = new System.Drawing.Point(242, 78);
+            this.AddSeller.Location = new System.Drawing.Point(262, 78);
             this.AddSeller.Name = "AddSeller";
             this.AddSeller.Size = new System.Drawing.Size(358, 44);
             this.AddSeller.TabIndex = 10;
@@ -85,8 +85,8 @@ namespace Pharmacy.AdministrationWindows
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Продавцы",
-            "Поставщики"});
+            "Поставщики",
+            "Продавцы"});
             this.comboBox1.Location = new System.Drawing.Point(12, 78);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(207, 24);
@@ -104,7 +104,7 @@ namespace Pharmacy.AdministrationWindows
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(588, 308);
+            this.dataGridView2.Size = new System.Drawing.Size(608, 308);
             this.dataGridView2.TabIndex = 12;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -113,7 +113,7 @@ namespace Pharmacy.AdministrationWindows
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(609, 450);
+            this.ClientSize = new System.Drawing.Size(632, 450);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.AddSeller);

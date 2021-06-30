@@ -28,6 +28,7 @@ namespace Pharmacy
                 if (chekSuppliers == true)
                 {
                         SuppliersWindows.Suppliers.SuppliersNameCurrent.NameSupplirs = suppliers.NameSuppliers;
+                        SuppliersWindows.Suppliers.SuppliersNameCurrent.IdSuppliers = suppliers.Idsuppliers;
                 }
                 else if (chekSuppliers == false)
                 {
