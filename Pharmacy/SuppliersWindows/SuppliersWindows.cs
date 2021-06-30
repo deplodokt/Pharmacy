@@ -165,6 +165,7 @@ namespace Pharmacy.SuppliersWindows
             {
                 string path = @"D:\КПиЯП\Pharmacy\Pharmacy\SuppliersWindows\SuppliersReport\"+ Suppliers.SuppliersNameCurrent.NameSupplirs+" от "+ DateTime.Now.ToString("d") + ".xls";
                 WriteInFile(dataGridView1, path);
+                MessageBox.Show("Отчет сформирован");
             }
         }
     }
